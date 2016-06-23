@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TheDoodlePage</title>
+
+    <!-- Open Source WinJS references -->
+    <script src="WinJS/js/base.js"></script>
+    <script src="WinJS/js/ui.js"></script>
+    
+    <script src="../../js/CSSMatrix.js"></script>
+    <link href="/pages/DoodlePage/DoodlePage.css" rel="stylesheet" />
+    <script src="/pages/DoodlePage/DoodlePage.js"></script>
+</head>
+<body>
+    <div id="azoomElement" style="margin-top: 0px; background: transparent; width: 100%;height: 100%; ">
+
+        	<div id="filmstripDiv" class="Tabletop" style="">
+        		<canvas class="filmstrip" id="imageCanvas" width="720" height="480" style= "vertical-align:middle; background-color: whitesmoke;" aria-label="Photo Canvas"></canvas>
+        	</div>
+
+    	<div class="ms-flexbox" id="toolPanel" style="border-bottom-left-radius:40px; border-top-left-radius:40px; position:absolute;top:calc(50% - 260px);left:calc(100% - 125px);width:150px; height:400px; z-index:9;background:grey;opacity:1;">
+    		<button data-win-control="WinJS.UI.AppBarCommand" style="position:absolute;top:calc(50% - 175px);left:calc(100% - 125px);z-index:10;text-shadow:1px 1px #888888;" data-win-options="{icon:'edit', id:'PenInkModeButton', label:'Pen', section:'selection', type:'button'}"></button>
+    		<button data-win-control="WinJS.UI.AppBarCommand" style="position:absolute;top:calc(50% - 100px);left:calc(100% - 125px);z-index:10;text-shadow:1px 1px #888888;" disabled="disabled" data-win-options="{icon:'✐', id:'PenEraseModeButton', label:'Eraser', section:'selection', type:'button'}"></button>
+            <table id="penPreviewContainer" style="background:black; outline:thin;outline-color:white; position:absolute;top:calc(50% - 20px);left:calc(100% - 105px);height:80px;z-index:10;text-shadow:1px 1px #888888;">
+    			<tbody>
+    				<tr>
+    					<td id="TD1" style="background:transparent; outline:thin;outline-color:white;">
+    						<input id="widthRange" class="win-vertical" step="any" type="range" title="Pen Width" min="1" max="50" width="50px">
+    					</td>
+                    
+    				</tr>
+    				<tr>
+    					<td id="penPreview" style="background: black;width:50px">
+                            <!--<button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'', id:'colorButton', label:'Color', section:'global', type:'button'}"></button>-->
+                            <button data-win-control="WinJS.UI.Command" data-win-options="{id:&apos;colorButton&apos;,label:&apos;Color&apos;,icon:'',section:&apos;primary&apos;,type:&apos;flyout&apos;,flyout:&apos;InkColorFlyout&apos;,tooltip:&apos;Choose color&apos;,priority:3}"
+                                    class="win-button" style="width:50px"></button>
+    					</td>
+                    
+    				</tr>
+    			</tbody>
+    		</table>
+    		<!--<button id="modeResize" data-win-control="WinJS.UI.AppBarCommand" style="position:absolute;top:calc(50% - 220px);left:calc(100% - 150px);z-index:10;text-shadow:1px 1px #888888;" data-win-options="{icon:'zoom', label:'Zoom Photo', section:'selection', type:'button'}"></button>-->
+    	</div>
+        	
+        </div>
+	<div data-win-control="WinJS.UI.AppBar" id="doodleAppBar" style="visibility:visible;">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'back', id:'backBtn', label:'Back', section:'global', type:'button'}"></button>
+		<button data-win-control="WinJS.UI.AppBarCommand" style="visibility:hidden" data-win-options="{icon:'reshare', id:'shareButton', label:'Share', section:'global', type:'button'}"></button>
+        <button id="clearButton" data-win-control="WinJS.UI.AppBarCommand" style="" data-win-options="{icon:'clear', id:'', label:'Reset Photo', section:'global', type:'button'}"></button>
+		<button id="showPanelButton" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'', id:'', label:'Show Ink Tools', section:'global', type:'toggle'}" style=""></button>
+    		<button data-win-control="WinJS.UI.AppBarCommand" style="visibility:hidden" data-win-options="{icon:'edit', id:'PenInkModeButtonAppBar', label:'Ink Mode', section:'global', type:'button'}"></button>
+    		<button data-win-control="WinJS.UI.AppBarCommand" style="visibility:hidden" data-win-options="{icon:'✐', id:'PenEraseModeButtonAppBar', label:'Erase Mode', section:'global', type:'button'}"></button>
+    		<!--<button id="modeResizeAppBar" data-win-control="WinJS.UI.AppBarCommand" style="visibility:hidden" data-win-options="{icon:'', label:'Zoom Photo', section:'selection', type:'button'}"></button>-->
+		<button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'copy', id:'copyButton', label:'Copy to Clipboard', section:'global', type:'button'}"></button>
+		<button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'save', id:'saveButton', label:'Save', section:'global', type:'button'}"></button>
+	</div>
+</body>
+</html>

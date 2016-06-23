@@ -1,0 +1,123 @@
+﻿
+
+.content,
+#app {
+    height: 100%;
+}
+
+    #app .win-splitviewpanetoggle {
+        float: right;
+    }
+
+    /* SplitView pane content style*/
+    #app .header {
+        white-space: nowrap;
+    }
+
+    #app .title {
+        font-size: 25px;
+        left: 2px;
+        margin-top: 0px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    #app .nav-commands {
+        margin-top: 10px;
+    }
+
+.win-navbarcommand-button {
+    background-color: transparent;
+}
+
+#app .win-splitview-pane-hidden .win-navbarcommand-button {
+    width: 46px;
+}
+
+#app .win-splitview-pane-hidden .win-navbarcommand-label {
+    /* Workaround: Make sure pane doesn't scroll if ContentDialog restores focus to
+       NavBarCommand's label
+    */
+    visibility: hidden;
+}
+
+/*SplitView content style*/
+#app .win-splitview-content {
+    /*background-color: rgb(112,112,112);*/
+}
+
+#app .contenttext {
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+#contentWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#statusBox {
+    flex-shrink: 0;
+}
+
+#contentHost {
+    margin: 0px;
+    padding: 0px 0px 20px 0px;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#contentHost #sampleHeader, #featureLabel {
+    font: 20pt/24pt "Segoe UI";
+    font-weight: 300;
+    white-space: normal;
+}
+
+#contentHost #scenarioDescription {
+    font: 11pt/15pt "Segoe UI";
+    font-weight: 300;
+}
+
+/* Template for the items in the ListViews in this sample */       
+.smallListIconTextItem
+{
+    width: 242px;
+    height: 70px;
+    padding: 5px;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+    .smallListIconTextItem img.smallListIconTextItem-Image 
+    {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        margin-right:20px;
+    }
+
+    .smallListIconTextItem .smallListIconTextItem-Detail
+    {
+        margin: 5px;
+    }
+
+   .listLayoutTopHeaderTemplateRoot {
+        font-size: larger;
+        margin-left: 16px;
+    }
+    
+/* CSS applied to the ListViews in this sample */
+#listView
+{
+    height: 100%;
+    width: 100%;
+}
+

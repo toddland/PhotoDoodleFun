@@ -1,0 +1,181 @@
+﻿.homepage section[role=main] {
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+}
+
+div.TableTop {
+    transform-origin: 0% 0%;
+    -ms-touch-action: none;
+    background-color: black;
+}
+
+div.filmstrip {
+    transform-origin: 0% 0%;
+    -ms-touch-action: none;
+    position: absolute;
+    border: solid white 1px;
+    transition-property: background-color;
+    /*transform-duration: 1s;*/
+}
+
+/* Style used for setting enabling zoom      */
+.zoomElement {
+    overflow: auto;
+    -ms-content-zooming:none;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 50%;
+    -ms-content-zoom-limit-max: 500%;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .homepage section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+        -ms-overflow-style:-ms-autohiding-scrollbar;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #doodleAppBar #saveButton{
+    visibility: hidden;
+    }
+    #doodleAppBar #shareButton{
+    visibility: hidden;
+    }
+    .win-appbar header[role=banner] #penPreviewContainer{
+    visibility: hidden;
+    }
+
+    .win-appbar header {
+    -ms-grid-columns: 101px 1fr 1px 101px;
+
+}
+
+    
+    /*.win-appbar header .win-backbutton {
+    visibility: hidden;
+    }*/
+
+}
+
+@media screen and (-ms-view-state: fullscreen) {
+
+   .homepage section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+        -ms-overflow-style:none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .homepage section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+#topLayoutAppBar {
+    height: 180px;
+}
+/*#topLayoutAppBar .win-backbutton:active:hover {
+    color: #0ff;
+}*/
+.win-appbar header {
+    height: 100%;
+    width: 100%;
+    -ms-grid-columns: 101px 1fr ;
+    -ms-grid-rows: 80px 1fr;
+    display: -ms-grid;
+}
+.win-appbar header .win-backbutton {
+    margin-left: 29px;
+    margin-top: 57px;
+}
+.win-appbar header .titleArea {
+    -ms-grid-column: 2;
+    margin-top: 14px;
+}
+.win-appbar header .titleArea .win-type-xx-large {
+    display: inline;
+    height: 60pt;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 20px);
+	-ms-grid-column: 1;
+}
+
+.win-appbar header .titlearea .colorchart td:hover {
+	box-shadow: 10px 10px 40px rgba(213,0,0,1);
+}
+
+
+
+#widthRange
+{
+    width: 40px;
+    height: 138px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    background-color:rgba(0,0,0,0.5);
+}
+
+#widthRange::-ms-thumb
+{
+    width: 24px;
+    height: 25px;
+    padding: 0px;
+    border: 0px;
+    margin-top: 0px;
+    background-color: transparent;
+    background-image: url('../../images/steps/thumb.png');
+}
+
+/* put :hover after ::-ms-thumb, so that when the user hovers on the track, the thumb doesn't light up */
+#widthRange::-ms-thumb:hover
+{
+    background-image: url('../../images/steps/thumb_hover.png');
+}
+
+/* if you put :active after ::-ms-thumb, then if the user presses on the track, the thumb doesn't turn active even after 
+it jumps to the place where the user presses, because the active pseudo element is still the track, not the thumb */
+#widthRange:active::-ms-thumb
+{
+    background-image: url('../../images/steps/thumb_active.png');
+}
+
+#widthRange::-ms-track
+{
+    height: 198px;
+    width: 40px;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    color: white;
+    background-color: transparent;
+}
+
+/*#widthRange::-ms-fill-lower, #widthRange::-ms-fill-upper
+{
+    height: 47px;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}*/
+    
+#widthRange::-ms-fill-lower
+{
+    background-color: white;
+}
+/*
+#widthRange::-ms-fill-upper
+{
+    background-image: url('../../images/steps/slider_enabled.png');
+    background-position: right top;
+}*/
+

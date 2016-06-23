@@ -1,0 +1,29 @@
+﻿<!--
+Copyright (c) Microsoft Corporation. All rights reserved
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link href="/pages/SecondaryView/secondaryView.css" rel="stylesheet" />
+    <script src="WinJS/js/base.js"></script>
+    <script src="WinJS/js/ui.js"></script>
+    <script src="/js/ai.js"></script>
+    <script src="/pages/SecondaryView/secondaryView.js"></script>
+</head>
+
+<body class="win-type-body" style="background-color:black">
+
+    <div class="titleWrapper" >
+        <div class="proj-win-button" id="swapDisplayButton" style="margin-left:20px;margin-top:10px; position:absolute; color:ButtonHighlight"></div>
+        <div class="proj-win-button" id="stopProjectionButton" style="position:absolute; margin-left:calc(100% - 38px);margin-top:10px;color:ButtonHighlight"></div>
+    </div>
+    <div class="ms-grid" id="contentHost" style="position: absolute; height: 100%; width: 100%">
+        <canvas class="filmstrip" id="pixBox" style="position: absolute; z-index: 10;background-color:transparent;"></canvas>
+        <video id="videoBox" style="position: absolute; z-index: 1; height: 90%; width: 100%; visibility: visible; background-color: transparent;" controls></video>
+    </div>
+</body>
+
+</html>

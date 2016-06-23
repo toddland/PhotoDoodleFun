@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+<head>
+    <title></title>
+     <script src="WinJS/js/base.js"></script>
+    <script src="WinJS/js/ui.js"></script>
+    <link href="/pages/Settings/Settings.css" rel="stylesheet" />
+    <script src="/pages/Settings/Settings.js"></script>
+    <script src="/js/ai.js"></script>
+
+</head>
+<body >
+    <div class="header">
+        <p></p>
+        <div style="font-size: 20px;
+        margin-left: 25px;
+        margin-top: 5px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 100%;
+        color:white;
+        ">
+            Select a color theme:<p></p>
+
+        </div>
+    </div>
+    <div style="font-size: 20px; margin-left: 5px; width: 100%; height:100px">
+        <table id="colorchart" style="width:100%;height: 80%">
+            <tbody>
+                <tr><td style="background: #115013"></td><td style="background: #000000"></td><td style="background: #8181f7"></td><td style="background: #ff0000"></td><td style="background: #0026ff"></td><td style="background: #ff00dc"></td><td style="background: #808080"></td><td style="background: #ff6a00"></td></tr>
+                <!--<tr><td style="background: #fa5858"></td><td style="background: #fa8258"></td><td style="background: #faac58"></td><td style="background: #f7d358"></td><td style="background: #f4fa58"></td><td style="background: #d0fa58"></td><td style="background: #acfa58"></td><td style="background: #82fa58"></td><td style="background: #58fa58"></td><td style="background: #58fa82"></td><td style="background: #58faac"></td><td style="background: #58fad0"></td><td style="background: #58faf4"></td><td style="background: #58d3f7"></td><td style="background: #58acfa"></td><td style="background: #5882fa"></td><td style="background: #5858fa"></td><td style="background: #8258fa"></td><td style="background: #ac58fa"></td><td style="background: #d358f7"></td><td style="background: #fa58f4"></td><td style="background: #fa58d0"></td><td style="background: #fa58ac"></td><td style="background: #fa5882"></td><td style="background: #bdbdbd"></td></tr>
+                <tr><td style="background: #fe2e2e"></td><td style="background: #fe642e"></td><td style="background: #fe9a2e"></td><td style="background: #facc2e"></td><td style="background: #f7fe2e"></td><td style="background: #c8fe2e"></td><td style="background: #9afe2e"></td><td style="background: #64fe2e"></td><td style="background: #2efe2e"></td><td style="background: #2efe64"></td><td style="background: #2efe9a"></td><td style="background: #2efec8"></td><td style="background: #2efef7"></td><td style="background: #2eccfa"></td><td style="background: #2e9afe"></td><td style="background: #2e64fe"></td><td style="background: #2e2efe"></td><td style="background: #642efe"></td><td style="background: #9a2efe"></td><td style="background: #cc2efa"></td><td style="background: #fe2ef7"></td><td style="background: #fe2ec8"></td><td style="background: #fe2e9a"></td><td style="background: #fe2e64"></td><td style="background: #a4a4a4"></td></tr>
+                <tr><td style="background: #ff0000"></td><td style="background: #ff4000"></td><td style="background: #ff8000"></td><td style="background: #ffbf00"></td><td style="background: #ffff00"></td><td style="background: #bfff00"></td><td style="background: #80ff00"></td><td style="background: #40ff00"></td><td style="background: #00ff00"></td><td style="background: #00ff40"></td><td style="background: #00ff80"></td><td style="background: #00ffbf"></td><td style="background: #00ffff"></td><td style="background: #00bfff"></td><td style="background: #0080ff"></td><td style="background: #0040ff"></td><td style="background: #0000ff"></td><td style="background: #4000ff"></td><td style="background: #8000ff"></td><td style="background: #bf00ff"></td><td style="background: #ff00ff"></td><td style="background: #ff00bf"></td><td style="background: #ff0080"></td><td style="background: #ff0040"></td><td style="background: #848484"></td></tr>
+                <tr><td style="background: #df0101"></td><td style="background: #df3a01"></td><td style="background: #df7401"></td><td style="background: #dba901"></td><td style="background: #d7df01"></td><td style="background: #a5df00"></td><td style="background: #74df00"></td><td style="background: #3adf00"></td><td style="background: #01df01"></td><td style="background: #01df3a"></td><td style="background: #01df74"></td><td style="background: #01dfa5"></td><td style="background: #01dfd7"></td><td style="background: #01a9db"></td><td style="background: #0174df"></td><td style="background: #013adf"></td><td style="background: #0101df"></td><td style="background: #3a01df"></td><td style="background: #7401df"></td><td style="background: #a901db"></td><td style="background: #df01d7"></td><td style="background: #df01a5"></td><td style="background: #df0174"></td><td style="background: #df013a"></td><td style="background: #6e6e6e"></td></tr>
+                <tr><td style="background: #b40404"></td><td style="background: #b43104"></td><td style="background: #b45f04"></td><td style="background: #b18904"></td><td style="background: #aeb404"></td><td style="background: #86b404"></td><td style="background: #5fb404"></td><td style="background: #31b404"></td><td style="background: #04b404"></td><td style="background: #04b431"></td><td style="background: #04b45f"></td><td style="background: #04b486"></td><td style="background: #04b4ae"></td><td style="background: #0489b1"></td><td style="background: #045fb4"></td><td style="background: #0431b4"></td><td style="background: #0404b4"></td><td style="background: #3104b4"></td><td style="background: #5f04b4"></td><td style="background: #8904b1"></td><td style="background: #b404ae"></td><td style="background: #b40486"></td><td style="background: #b4045f"></td><td style="background: #b40431"></td><td style="background: #585858"></td></tr>
+                <tr><td style="background: #8a0808"></td><td style="background: #8a2908"></td><td style="background: #8a4b08"></td><td style="background: #886a08"></td><td style="background: #868a08"></td><td style="background: #688a08"></td><td style="background: #4b8a08"></td><td style="background: #298a08"></td><td style="background: #088a08"></td><td style="background: #088a29"></td><td style="background: #088a4b"></td><td style="background: #088a68"></td><td style="background: #088a85"></td><td style="background: #086a87"></td><td style="background: #084b8a"></td><td style="background: #08298a"></td><td style="background: #08088a"></td><td style="background: #29088a"></td><td style="background: #4b088a"></td><td style="background: #6a0888"></td><td style="background: #8a0886"></td><td style="background: #8a0868"></td><td style="background: #8a084b"></td><td style="background: #8a0829"></td><td style="background: #121212"></td></tr>-->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

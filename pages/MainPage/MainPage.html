@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+<head>
+    <title></title>
+     <script src="WinJS/js/base.js"></script>
+    <script src="WinJS/js/ui.js"></script>
+    <link href="/pages/Mainpage/MainPage.css" rel="stylesheet" />
+    <script src="/pages/Mainpage/MainPage.js"></script>
+    <script src="/Pages/PhotosList/PhotosList.js"></script>
+    <script src="/Pages/DoodlesList/DoodlesList.js"></script>
+    <script src="/Pages/DoodlePage/DoodlePage.js"></script>
+    <script src="/js/ViewManagementUtils.js"></script>
+    <script src="/js/ai.js"></script>
+
+</head>
+<body >
+
+        <div id="pivotHeader" data-win-control="WinJS.UI.Pivot" data-win-options="{ selectedIndex: 0 }" style="overflow:auto;">
+
+            <div id="pivotPix" class="pivotItem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'Photo Library' }">
+                <div id="photoHost">
+                </div>
+            </div>
+
+            <!--<div id="pivotDoodle" class="pivotItem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'Saved Doodles' }">
+                <div id="doodleHost">
+                </div>
+            </div>-->
+
+            <div id="pivotSettings" class="pivotItem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'Settings' }">
+                <div id="settingHost">
+                </div>
+            </div>
+        </div>
+</body>
+</html>

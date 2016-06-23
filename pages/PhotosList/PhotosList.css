@@ -1,0 +1,145 @@
+﻿#flipview.photo {
+	min-width: 390px;
+	width: calc(80% - 5px);
+	height: calc(80% - 5px);
+}
+
+#listView
+{
+    width: 100%;
+}
+
+/* Template for the items in the ListViews in this sample */       
+.smallListIconTextItem
+{
+    width: 282px;
+    height: 70px;
+    padding: 1px;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	background-color: #2B2B2B;
+    font-size: 10px;
+}
+
+    .smallListIconTextItem img.smallListIconTextItem-Image 
+    {
+        width: 100px;
+        height: 60px;
+        margin: 5px;
+        margin-right:10px;
+    }
+
+    .smallListIconTextItem .smallListIconTextItem-Detail
+    {
+        margin: 1px;
+    }
+
+/* Template for items in the ListView */  
+.mediumListIconTextItem
+{
+    width: 342px;
+    height: 130px;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #2B2B2B;
+    font-size: 12px;
+}
+
+.mediumListIconTextItem img.mediumListIconTextItem-Image 
+{
+    width: auto;
+    height: 120px;
+    margin: 5px;
+    margin-right:10px;
+}
+
+.mediumListIconTextItem .mediumListIconTextItem-Detail
+{
+    margin: 5px;
+}
+   .listLayoutTopHeaderTemplateRoot {
+        font-size: 12px;
+        margin-left: 16px;
+    }
+    .itemStyling p {
+    margin-left: 0px;
+}
+
+.simpleItemTemplateRoot {
+    width: auto; 
+    height: auto;
+}
+
+.simpleItemTemplateImage {
+    height: auto;
+    width: auto;
+}
+
+.simpleItemTemplateText {
+    height: 20px; 
+    padding: 5px;
+}
+
+
+/* CSS applied to the ListViews in this sample */
+#listView
+{
+    height: 100%;
+    width: 100%;
+}
+
+.overlaidItemTemplate img
+{
+    width: 100%;
+    height: 100%;
+}
+    
+.overlaidItemTemplate .overlay
+{
+    position: relative;
+    -ms-grid-row-align: end;
+    background-color: rgba(0,0,0,0.65);
+    overflow:auto;
+    vertical-align:top
+}
+
+.overlaidItemTemplate .overlay .ItemTitle
+{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 7px 14px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 10px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+ .button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+ .button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }

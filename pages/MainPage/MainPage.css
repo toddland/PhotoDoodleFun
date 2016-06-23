@@ -1,0 +1,20 @@
+﻿#pivotHeader {
+	min-width: 390px;
+	width: 100%;
+}
+
+#videoBox {
+	min-width: 390px;
+	width: calc(80% - 5px);
+	height: calc(80% - 5px);
+}
+
+#photoHost {
+	width: 100%;
+	height: 100%;
+}
+
+.win-pivot-item .win-pivot-item-content {
+	padding: 0 0 0 0px;
+}
+

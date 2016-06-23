@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title></title>
+    <script src="WinJS/js/base.js"></script>
+    <script src="WinJS/js/ui.js"></script>
+    <link href="/pages/PhotosList/DoodlesList.css" rel="stylesheet" />
+    <script src="/pages/PhotosList/DoodlesList.js"></script>
+    <script src="/pages/PhotosList/getDoodleFilesWorker.js"></script>
+    <script src="/js/ai.js"></script>
+
+</head>
+<body>
+    <!-- Simple template for the ListView instantiation  -->
+    <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+        <div class="smallListIconTextItem">
+            <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
+            <div class="smallListIconTextItem-Detail">
+                <h4 class="win-h4" data-win-bind="textContent: title"></h4>
+                <h6 class="win-h6" data-win-bind="textContent: text"></h6>
+            </div>
+        </div>
+    </div>
+    <div class="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+        <div class="mediumListIconTextItem">
+            <img src="#" class="mediumListIconTextItem-Image" data-win-bind="src: picture" />
+            <div class="mediumListIconTextItem-Detail">
+                <h4 class="win-h4" data-win-bind="textContent: title"></h4>
+                <h6 class="win-h6" data-win-bind="textContent: text"></h6>
+            </div>
+        </div>
+    </div>
+    <div id="simpleItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="overlaidItemTemplate">
+            <img class="simpleItemTemplateImage"
+                 src="#"
+                 data-win-bind="src: bigPicture;
+                 alt: title" ;=; />
+            <div class="overlay" style="color: rgba(255, 255, 255, 0.8);">
+                <h2 class="win-h4" data-win-bind="innerText: title"></h2>
+                <h6 class="win-h6" data-win-bind="innerText: text"></h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- The declarative markup necesary for ListView instantiation -->
+    <!-- Call WinJS.UI.processAll() in your initialization code -->
+    <div id="listViewDoodle"
+         style="visibility:visible"
+         class="win-selectionstylefilled"
+         data-win-control="WinJS.UI.ListView"
+         data-win-options="{
+            itemDataSource: ShowAndTell.ListViewDoodles.data.dataSource,
+            itemTemplate: select('.smallListIconTextTemplate'),
+            selectionMode: 'single',
+            tapBehavior: 'invoke',
+            layout: { type: WinJS.UI.GridLayout }
+            }">
+    </div>
+    <div id="flipview.photo" data-win-control="WinJS.UI.FlipView" ZoomMode="Enabled" MinZoomFactor="1" MaxZoomFactor="3" style="top:0px;left:0px;touch-action:pinch-zoom"
+         data-win-options="{
+            itemDataSource: ShowAndTell.ListViewDoodles.data.dataSource,itemTemplate: select('#simpleItemTemplate') }">
+    </div>
+</body>
+</html>

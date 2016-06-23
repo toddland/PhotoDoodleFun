@@ -1,0 +1,51 @@
+﻿<!--
+Copyright (c) Microsoft Corporation. All rights reserved
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/css/SettingsPane.css" />
+    <script src="/js/configuration.js"></script>
+    <script src="/js/SettingsPane.js"></script>
+</head>
+<body>
+    <!-- WinJS.Binding.Template for #scenarioControl -->
+    <div id="scenarioItem" data-win-control="WinJS.Binding.Template" >
+        <div class="scenarioItem" data-win-bind="title: title">
+            <span data-win-bind="innerText: title"></span>
+        </div>
+    </div>
+
+    <p>
+        The view <span id="reportFullScreenMode"></span> full screen mode.
+    </p>
+    <p>
+        <button id="toggleFullScreenMode" class="win-button" style="min-width: 32px"></button>
+    </p>
+
+    <div id="scenarioContent">
+        <p>Get all the files in the picked folder, then indicate their location (This PC, OneDrive, Network, or Application Content) and whether they are available offline.</p>
+        <button class="action win-button" id="getFiles">Get files</button>
+    </div>
+    
+    <!--<div id="scenarioControl" class="win-selectionstylefilled"
+         data-win-control="WinJS.UI.ListView"
+         data-win-options="{
+            itemDataSource: ShowAndTell.scenarios.dataSource,
+            itemTemplate: select('#scenarioItem'),
+            selectionMode: WinJS.UI.SelectionMode.single,
+            tapBehavior: WinJS.UI.TapBehavior.directSelect,
+            layout: { type: WinJS.UI.ListLayout }
+         }">
+    </div>-->
+
+
+    <div id="scenarioOutput">
+        <ul id="itemsList" class="outputList"></ul>
+    </div>
+
+
+</body>
+</html>
